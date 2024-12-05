@@ -26,5 +26,9 @@ class Form1(Form1Template):
     self.email_box.text = ""
     self.feedback_box.text = ""
 
+  def drop_down_1_change(self, **event_args):
+    "b = DropDown(items=["Item 1", "Item 2"]""
+    pass
+
 
 

@@ -3,34 +3,28 @@ components:
   - components:
     - layout_properties: {grid_position: 'IEVAXK,QCCFZP'}
       name: label_1
-      properties: {align: left, background: '', bold: true, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: headline, spacing_above: small, spacing_below: small, text: Feedback Form, tooltip: '', underline: false, visible: true}
+      properties: {align: left, background: '', bold: true, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: headline, spacing_above: small, spacing_below: small, text: Lab Booking, tooltip: '', underline: false, visible: true}
       type: Label
     - layout_properties: {grid_position: 'ROOKHV,WBMCVD'}
       name: label_2
-      properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: 'Name:', tooltip: '', underline: false, visible: true}
+      properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: Date, tooltip: '', underline: false, visible: true}
       type: Label
-    - layout_properties: {grid_position: 'ROOKHV,CPYUWC'}
-      name: name_box
+    - data_bindings: []
+      layout_properties: {grid_position: 'ROOKHV,OJDSNH'}
+      name: date_picker_1
       properties: {}
-      type: TextBox
-    - layout_properties: {grid_position: 'ICXUVK,HQIARV'}
-      name: label_3
-      properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: 'Email:', tooltip: '', underline: false, visible: true}
+      type: DatePicker
+    - layout_properties: {grid_position: ',undefined'}
+      name: label_2_copy_2
+      properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: Time, tooltip: '', underline: false, visible: true}
       type: Label
-    - layout_properties: {grid_position: 'ICXUVK,WWAASA'}
-      name: email_box
+    - data_bindings: []
+      layout_properties: {grid_position: ',ZSPARJ'}
+      name: date_picker_1_copy
       properties: {}
-      type: TextBox
-    - layout_properties: {grid_position: 'MBANSN,DSAPWS'}
-      name: label_4
-      properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: 'Feedback:', tooltip: '', underline: false, visible: true}
-      type: Label
-    - layout_properties: {grid_position: 'VBRMEF,GFZMQR'}
-      name: feedback_box
-      properties: {}
-      type: TextArea
+      type: DatePicker
     - event_bindings: {click: submit_button_click}
-      layout_properties: {grid_position: 'MHBKKL,GWGQWM'}
+      layout_properties: {grid_position: 'WDNLJC,HDKGNS'}
       name: submit_button
       properties: {align: center, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: primary-color, spacing_above: small, spacing_below: small, text: Submit, tooltip: '', underline: false, visible: true}
       type: Button
@@ -46,6 +40,10 @@ components:
   name: navbar_links
   properties: {}
   type: FlowPanel
+- layout_properties: {slot: title}
+  name: label_2_copy
+  properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: 'Chemistry Lab Management ', tooltip: '', underline: false, visible: true}
+  type: Label
 container:
   properties: {html: '@theme:standard-page.html'}
   type: HtmlTemplate
