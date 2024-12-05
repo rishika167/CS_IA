@@ -6,29 +6,25 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 class Form1(Form1Template):
+    def __init__(self, **properties):
+        self.init_components(**properties)
+        
+        # Populate time dropdown
+        self.time_dropdown = [("8:00-9:00", "8:00-9:00"), 
+                                    ("9:00-10:00", "9:00-10:00"), 
+                                    ("10:00-11:00", "10:00-11:00")]
 
-  def __init__(self, **properties):
-    # Set Form properties and Data Bindings.
-    self.init_components(**properties)
-
-    # Any code you write here will run when the form opens.
-
-  def submit_button_click(self, **event_args):
-    name = self.name_box.text
-    email = self.email_box.text
-    feedback = self.feedback_box.text
-    anvil.server.call('add_feedback', name, email, feedback)
-    Notification("Feedback submitted!").show()
-    self.clear_inputs()
-    
-  def clear_inputs(self):
-    self.name_box.text = ""
-    self.email_box.text = ""
-    self.feedback_box.text = ""
-
-  def drop_down_1_change(self, **event_args):
-    "b = DropDown(items=["Item 1", "Item 2"]""
-    pass
-
-
-
+    def submit_button_click(self, **event_args):
+        """Handle the Submit button click."""
+        date = self.date_picker_1.date
+        time = self.drop_down_1.selected_value
+        
+        if date and time:
+            try:
+                # Call the server function to save the booking
+                result = anvil.server.call('save_booking', date, time)
+                alert(result, title="Success")
+            except Exception as e:
+                alert(f"Error saving booking: {e}", title="Error")
+        else:
+            alert("Please select both a date and a time.", title="Error")

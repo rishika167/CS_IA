@@ -18,6 +18,11 @@ db_schema:
       type: datetime
     server: full
     title: feedback
+  table_2:
+    client: none
+    columns: []
+    server: full
+    title: Table 2
 dependencies: []
 metadata: {}
 name: 'Clone of Tutorial: Feedback form (3)'

@@ -14,14 +14,12 @@ def add_feedback(name, email, feedback):
     created=datetime.now()
   )
   # Send yourself an email each time feedback is submitted
-  anvil.email.send(#to="shaun@anvil.works", # Change this to your email address
-                   subject="Feedback from {}".format(name),
+  anvil.email.send(to="rishika.k1697@gmail.com", # Change this to your email address
+                   subject="Request {}".format(name),
                    text="""
-  A new person has filled out the feedback form!
+  A new request has been sent!
 
-  Name: {}
-  Email address: {}
-  Feedback:
-  {}
-  """.format(name, email, feedback))
+  Date: {}
+  Time: {}
+  
 
