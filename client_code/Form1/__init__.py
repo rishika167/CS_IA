@@ -11,11 +11,11 @@ class Form1(Form1Template):
         
         # Populate time dropdown
         self.time_dropdown = [("8:00-9:00", "8:00-9:00"), 
-                                    ("9:00-10:00", "9:00-10:00"), 
-                                    ("10:00-11:00", "10:00-11:00")]
+                              ("9:00-10:00", "9:00-10:00"), 
+                              ("10:00-11:00", "10:00-11:00")]
 
     def submit_button_click(self, **event_args):
-        """Handle the Submit button click."""
+        "Handle the Submit button click."
         date = self.date_picker_1.date
         time = self.drop_down_1.selected_value
         
