@@ -2,20 +2,17 @@ allow_embedding: false
 correct_dependency_ids: {}
 db_schema:
   bookings:
-    client: full
+    client: none
     columns:
     - admin_ui: {width: 200}
       name: name
       type: string
-    - admin_ui: {width: 200}
-      name: email
+    - admin_ui: {order: 1, width: 200}
+      name: userID
       type: string
-    - admin_ui: {width: 200}
-      name: feedback
-      type: string
-    - admin_ui: {width: 200}
-      name: created
-      type: datetime
+    - admin_ui: {order: 2, width: 200}
+      name: Date
+      type: date
     server: search
     title: bookings
   users:
