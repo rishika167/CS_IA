@@ -1,7 +1,5 @@
 from ._anvil_designer import Form1Template
 from anvil import *
-import anvil.google.auth, anvil.google.drive
-from anvil.google.drive import app_files
 import anvil.users
 import anvil.server
 import anvil.tables as tables
@@ -31,3 +29,7 @@ class Form1(Form1Template):
                 alert(f"Error saving booking: {e}", title="Error")
         else:
             alert("Please select both a date and a time.", title="Error")
+
+    def drop_down_1_change(self, **event_args):
+      """This method is called when an item is selected"""
+      pass
