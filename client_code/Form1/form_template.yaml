@@ -10,6 +10,7 @@ components:
       properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: Date, tooltip: '', underline: false, visible: true}
       type: Label
     - data_bindings: []
+      event_bindings: {change: date_picker_1_change}
       layout_properties: {grid_position: 'ROOKHV,OJDSNH'}
       name: date_picker_1
       properties: {}
