@@ -1,18 +1,32 @@
 components:
 - components:
-  - components:
-    - layout_properties: {grid_position: 'SWGLPP,CQGQCI'}
-      name: button_3
-      properties: {text: button_3}
-      type: Button
-    - layout_properties: {grid_position: 'SWGLPP,VZIQEM'}
-      name: button_2
-      properties: {text: button_2}
-      type: Button
+  - event_bindings: {click: button_2_click}
+    layout_properties: {grid_position: 'YOMFQC,RPJBOS'}
+    name: button_2
+    properties: {role: primary-color, text: apparatus}
+    type: Button
+  - data_bindings: []
     layout_properties: {grid_position: 'YOMFQC,QDUFBI'}
-    name: card_2
-    properties: {role: card}
-    type: ColumnPanel
+    name: button_3
+    properties: {role: primary-color, text: 'Chemicals '}
+    type: Button
+  - event_bindings: {click: button_4_click}
+    layout_properties: {grid_position: 'PLARRV,BWNSHX'}
+    name: button_4
+    properties: {role: primary-color, text: Add User}
+    type: Button
+  - layout_properties: {grid_position: 'PLARRV,ALRLPP'}
+    name: button_5
+    properties: {role: primary-color, text: 'Bookings '}
+    type: Button
+  - layout_properties: {grid_position: 'SBGWXT,RVWSFO'}
+    name: button_6
+    properties: {role: primary-color, text: button_6}
+    type: Button
+  - layout_properties: {grid_position: 'SBGWXT,ZNUPNQ'}
+    name: button_7
+    properties: {role: primary-color, text: button_7}
+    type: Button
   layout_properties: {slot: default}
   name: content_panel
   properties: {}
@@ -21,15 +35,10 @@ components:
   name: navbar_links
   properties: {}
   type: FlowPanel
-- components:
-  - layout_properties: {grid_position: 'UTIFVS,WMYAYY'}
-    name: button_1
-    properties: {text: 'Sign Out '}
-    type: Button
-  layout_properties: {slot: left-nav}
-  name: card_1
-  properties: {role: card}
-  type: ColumnPanel
+- layout_properties: {slot: left-nav}
+  name: button_1
+  properties: {text: Sign Out}
+  type: Button
 container:
   properties: {html: '@theme:standard-page.html'}
   type: HtmlTemplate
