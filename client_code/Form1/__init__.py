@@ -37,3 +37,7 @@ class Form1(Form1Template):
     def date_picker_1_change(self, **event_args):
       """This method is called when the selected date changes"""
       pass
+
+    def button_2_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      pass
