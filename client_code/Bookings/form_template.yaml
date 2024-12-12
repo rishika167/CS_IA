@@ -55,20 +55,8 @@ components:
   properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: 'Chemistry Lab Management ', tooltip: '', underline: false, visible: true}
   type: Label
 - components:
-  - layout_properties: {}
-    name: button_1
+  - name: button_1
     properties: {text: SIGN OUT}
-    type: Button
-  - data_bindings:
-    - {code: 'self.item[''dashboard'']', property: text, writeback: false}
-    event_bindings: {click: button_2_click}
-    layout_properties: {}
-    name: button_2
-    properties: {enabled: true, text: dashboard, visible: true}
-    type: Button
-  - layout_properties: {}
-    name: button_3
-    properties: {text: ''}
     type: Button
   layout_properties: {slot: left-nav}
   name: linear_panel_1

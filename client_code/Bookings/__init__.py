@@ -1,4 +1,4 @@
-from ._anvil_designer import Form1Template
+from ._anvil_designer import BookingsTemplate
 from anvil import *
 import anvil.users
 import anvil.server
@@ -6,7 +6,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class Form1(Form1Template):
+class Bookings(BookingsTemplate):
     def __init__(self, **properties):
         self.init_components(**properties)
         

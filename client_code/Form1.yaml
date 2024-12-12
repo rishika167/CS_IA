@@ -1,0 +1,21 @@
+components:
+- components: []
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
+- layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+- components:
+  - name: button_1
+    properties: {text: button_1}
+    type: Button
+  layout_properties: {slot: left-nav}
+  name: linear_panel_1
+  properties: {}
+  type: LinearPanel
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
