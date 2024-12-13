@@ -1,0 +1,52 @@
+components:
+- components:
+  - components:
+    - layout_properties: {}
+      name: label_1
+      properties: {text: User ID}
+      type: Label
+    layout_properties: {grid_position: 'QXBRSM,XHFCMN'}
+    name: linear_panel_1
+    properties: {}
+    type: LinearPanel
+  - layout_properties: {grid_position: 'QXBRSM,WGTTFS'}
+    name: user_id
+    properties: {height: 43}
+    type: TextArea
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
+- layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+- components:
+  - components:
+    - layout_properties: {}
+      name: label_1_copy_2
+      properties: {text: Password}
+      type: Label
+    layout_properties: {grid_position: 'QXBRSM,XHFCMN'}
+    name: linear_panel_1_copy_2
+    properties: {}
+    type: LinearPanel
+  - layout_properties: {grid_position: 'QXBRSM,WGTTFS'}
+    name: password
+    properties: {height: 43}
+    type: TextArea
+  - data_bindings:
+    - {code: '', property: tooltip, writeback: false}
+    event_bindings: {click: sign_in_button_click}
+    layout_properties: {grid_position: 'OVACKK,RMFSQR'}
+    name: sign_in_button
+    properties: {role: primary-color, text: SIGN IN, tooltip: click button to s}
+    type: Button
+  layout_properties: {slot: default}
+  name: content_panel_copy_2
+  properties: {}
+  type: ColumnPanel
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+custom_component: false

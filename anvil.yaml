@@ -38,7 +38,7 @@ db_schema:
       type: string
     server: full
     title: chemicals
-  slot:
+  slots:
     client: full
     columns:
     - admin_ui: {order: 0, width: 200}
@@ -46,12 +46,12 @@ db_schema:
       type: string
     - admin_ui: {order: 1, width: 200}
       name: from
-      type: string
+      type: datetime
     - admin_ui: {order: 2, width: 200}
       name: to
-      type: string
+      type: datetime
     server: full
-    title: Slot
+    title: slots
   users:
     client: full
     columns:
@@ -98,5 +98,5 @@ services:
 - client_config: {}
   server_config: {}
   source: /runtime/services/anvil/email.yml
-startup: {module: Add_User, type: form}
+startup: {module: Log_in, type: form}
 startup_form: null
