@@ -13,12 +13,12 @@ class AdminPagelanding(AdminPagelandingTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
-
-  def button_4_click(self, **event_args):
+    
+  def add_user_click(self, **event_args):
     """This method is called when the button is clicked"""
     pass
 
-  def button_2_click(self, **event_args):
+  def apparatus_page_click(self, **event_args):
     """This method is called when the button is clicked"""
     form1 = 
     open_form(form1)

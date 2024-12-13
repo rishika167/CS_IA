@@ -1,35 +1,35 @@
 components:
 - components:
-  - event_bindings: {click: button_4_click}
+  - event_bindings: {click: add_user_click}
     layout_properties: {grid_position: 'PLARRV,BWNSHX QXFXMR,CAXXBR'}
-    name: button_4
+    name: add_user
     properties: {role: primary-color, text: Add User}
     type: Button
-  - event_bindings: {click: button_2_click}
-    layout_properties: {grid_position: 'PLARRV,BWNSHX YNEJNO,KZEWEY'}
-    name: button_2
+  - event_bindings: {click: apparatus_page_click}
+    layout_properties: {grid_position: 'PLARRV,BWNSHX HXDJMT,MMBXPH'}
+    name: apparatus_page
     properties: {role: primary-color, text: apparatus}
     type: Button
+  - layout_properties: {grid_position: 'PLARRV,BWNSHX ILBFGY,YMVVSN'}
+    name: button_7
+    properties: {role: primary-color, text: button_7}
+    type: Button
   - layout_properties: {grid_position: 'PLARRV,ALRLPP JXILZT,UAXZOV'}
-    name: button_5
+    name: bookings
     properties: {role: primary-color, text: 'Bookings '}
     type: Button
   - data_bindings: []
     layout_properties: {grid_position: 'PLARRV,ALRLPP QNEMFK,SWJIQL'}
-    name: button_3
+    name: chemicals_page
     properties: {role: primary-color, text: 'Chemicals '}
     type: Button
-  - layout_properties: {grid_position: 'SBGWXT,RVWSFO'}
-    name: button_6
+  - layout_properties: {grid_position: 'PLARRV,ALRLPP VTXPHY,XEFECF'}
+    name: view_reports
     properties: {role: primary-color, text: View reports}
-    type: Button
-  - layout_properties: {grid_position: 'SBGWXT,ZNUPNQ'}
-    name: button_7
-    properties: {role: primary-color, text: button_7}
     type: Button
   layout_properties: {slot: default}
   name: content_panel
-  properties: {}
+  properties: {col_widths: '{"BWNSHX":30,"ALRLPP":30}'}
   type: ColumnPanel
 - layout_properties: {slot: nav-right}
   name: navbar_links

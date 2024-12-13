@@ -21,6 +21,23 @@ db_schema:
       type: string
     server: search
     title: bookings
+  chemicals:
+    client: none
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: Chemical Name
+      type: string
+    - admin_ui: {order: 1, width: 200}
+      name: Critical_Stock_level
+      type: bool
+    - admin_ui: {order: 0.5, width: 200}
+      name: Quantity
+      type: number
+    - admin_ui: {order: 0.75, width: 200}
+      name: units
+      type: string
+    server: full
+    title: chemicals
   slot:
     client: full
     columns:

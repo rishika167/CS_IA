@@ -16,7 +16,7 @@ components:
     name: button_4
     properties: {text: Delete}
     type: Button
-  - layout_properties: {grid_position: 'YUSZMR,FHBUDA'}
+  - layout_properties: {grid_position: 'TIEKKI,KGGDTR'}
     name: card_1
     properties: {role: card}
     type: ColumnPanel
