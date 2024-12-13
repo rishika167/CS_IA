@@ -1,27 +1,27 @@
 components:
 - components:
-  - event_bindings: {click: button_2_click}
-    layout_properties: {grid_position: 'YOMFQC,RPJBOS'}
-    name: button_2
-    properties: {role: primary-color, text: apparatus}
-    type: Button
-  - data_bindings: []
-    layout_properties: {grid_position: 'YOMFQC,QDUFBI'}
-    name: button_3
-    properties: {role: primary-color, text: 'Chemicals '}
-    type: Button
   - event_bindings: {click: button_4_click}
-    layout_properties: {grid_position: 'PLARRV,BWNSHX'}
+    layout_properties: {grid_position: 'PLARRV,BWNSHX QXFXMR,CAXXBR'}
     name: button_4
     properties: {role: primary-color, text: Add User}
     type: Button
-  - layout_properties: {grid_position: 'PLARRV,ALRLPP'}
+  - event_bindings: {click: button_2_click}
+    layout_properties: {grid_position: 'PLARRV,BWNSHX YNEJNO,KZEWEY'}
+    name: button_2
+    properties: {role: primary-color, text: apparatus}
+    type: Button
+  - layout_properties: {grid_position: 'PLARRV,ALRLPP JXILZT,UAXZOV'}
     name: button_5
     properties: {role: primary-color, text: 'Bookings '}
     type: Button
+  - data_bindings: []
+    layout_properties: {grid_position: 'PLARRV,ALRLPP QNEMFK,SWJIQL'}
+    name: button_3
+    properties: {role: primary-color, text: 'Chemicals '}
+    type: Button
   - layout_properties: {grid_position: 'SBGWXT,RVWSFO'}
     name: button_6
-    properties: {role: primary-color, text: button_6}
+    properties: {role: primary-color, text: View reports}
     type: Button
   - layout_properties: {grid_position: 'SBGWXT,ZNUPNQ'}
     name: button_7
