@@ -2,29 +2,31 @@ components:
 - components:
   - layout_properties: {grid_position: 'TYXXTZ,RMDNKT'}
     name: label_1
-    properties: {text: NAME}
+    properties: {text: Name}
     type: Label
   - layout_properties: {grid_position: 'TYXXTZ,DFFLYM'}
-    name: text_box_1
-    properties: {text: 'Enter Name here '}
+    name: name_box_1
+    properties: {text: ''}
     type: TextBox
   - layout_properties: {grid_position: 'RMRMFF,SCWGWO MUROWD,BBENBS'}
     name: label_3
-    properties: {text: USER ID}
+    properties: {text: User ID}
     type: Label
   - layout_properties: {grid_position: 'RMRMFF,SCWGWO DTPCWK,WLNNOE'}
     name: label_2
-    properties: {text: ROLE}
+    properties: {text: Role}
     type: Label
-  - event_bindings: {pressed_enter: text_box_2_pressed_enter}
+  - event_bindings: {pressed_enter: user_id_box_pressed_enter}
     layout_properties: {grid_position: 'RMRMFF,RECDZX GQVURU,UUYDKT'}
-    name: text_box_2
-    properties: {text: 'Enter User ID here '}
+    name: user_id_box
+    properties: {text: ''}
     type: TextBox
   - data_bindings: []
     layout_properties: {grid_position: 'RMRMFF,RECDZX NYUFBQ,QOFJGN'}
     name: drop_down_1
-    properties: {include_placeholder: false}
+    properties:
+      include_placeholder: false
+      items: [Admin, Teacher]
     type: DropDown
   layout_properties: {slot: default}
   name: content_panel
@@ -34,6 +36,10 @@ components:
   name: navbar_links
   properties: {}
   type: FlowPanel
+- layout_properties: {slot: title}
+  name: label_4
+  properties: {text: Chemistry lab management system}
+  type: Label
 container:
   properties: {html: '@theme:standard-page.html'}
   type: HtmlTemplate
