@@ -13,3 +13,7 @@ class addSlot(addSlotTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
+
+  def drop_down_2_change(self, **event_args):
+    """This method is called when an item is selected"""
+    pass

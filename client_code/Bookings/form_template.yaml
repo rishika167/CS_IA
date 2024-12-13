@@ -19,9 +19,9 @@ components:
       name: label_2_copy_2
       properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: Slot, tooltip: '', underline: false, visible: true}
       type: Label
-    - event_bindings: {change: drop_down_1_change}
+    - event_bindings: {change: slot_for_teachers_change}
       layout_properties: {grid_position: ',FYHHQG'}
-      name: drop_down_1
+      name: slot_for_teachers
       properties:
         items: []
       type: DropDown
@@ -29,7 +29,8 @@ components:
       name: label_2_copy_2_copy
       properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: Special Request, tooltip: '', underline: false, visible: true}
       type: Label
-    - layout_properties: {grid_position: 'BSZCXS,SANRPE'}
+    - event_bindings: {pressed_enter: Special_request_pressed_enter}
+      layout_properties: {grid_position: 'BSZCXS,SANRPE'}
       name: Special_request
       properties: {}
       type: TextBox
