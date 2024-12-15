@@ -33,10 +33,25 @@ components:
   name: content_panel
   properties: {}
   type: ColumnPanel
-- layout_properties: {slot: nav-right}
+- components:
+  - event_bindings: {click: Back_click}
+    name: Back
+    properties: {background: 'theme:White', foreground: 'theme:Primary 500', text: Back}
+    type: Button
+  layout_properties: {slot: nav-right}
   name: navbar_links
   properties: {}
   type: FlowPanel
+- components:
+  - event_bindings: {click: Sign_out_click}
+    layout_properties: {grid_position: 'QPJEAW,IAVELN'}
+    name: Sign_out
+    properties: {text: Sign out}
+    type: Button
+  layout_properties: {slot: left-nav}
+  name: card_2
+  properties: {role: card}
+  type: ColumnPanel
 container:
   properties: {html: '@theme:standard-page.html'}
   type: HtmlTemplate

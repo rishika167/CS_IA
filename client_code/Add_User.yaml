@@ -32,7 +32,13 @@ components:
   name: content_panel
   properties: {}
   type: ColumnPanel
-- layout_properties: {slot: nav-right}
+- components:
+  - event_bindings: {click: Back_click}
+    layout_properties: {}
+    name: Back
+    properties: {background: 'theme:White', foreground: 'theme:Primary 500', text: Back}
+    type: Button
+  layout_properties: {slot: nav-right}
   name: navbar_links
   properties: {}
   type: FlowPanel
@@ -40,6 +46,11 @@ components:
   name: label_4
   properties: {text: Chemistry lab management system}
   type: Label
+- event_bindings: {click: Sign_out_click}
+  layout_properties: {slot: left-nav}
+  name: Sign_out
+  properties: {text: Sign out}
+  type: Button
 container:
   properties: {html: '@theme:standard-page.html'}
   type: HtmlTemplate

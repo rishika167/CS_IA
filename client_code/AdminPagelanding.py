@@ -1,7 +1,7 @@
 from ._anvil_designer import AdminPagelandingTemplate
 from anvil import *
-import anvil.server
 import anvil.users
+import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
@@ -16,10 +16,25 @@ class AdminPagelanding(AdminPagelandingTemplate):
     
   def add_user_click(self, **event_args):
     """This method is called when the button is clicked"""
-    pass
+    open_form('Add_User')
 
   def apparatus_page_click(self, **event_args):
     """This method is called when the button is clicked"""
-    form1 = 
-    open_form(form1)
+    open_form('Add_apparatus')
+
+  def button_7_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('addSlot')
+
+  def bookings_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('Bookings')
+
+  def chemicals_page_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('Add_chemicals')
+
+  def Sign_out_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('Log_in')
     

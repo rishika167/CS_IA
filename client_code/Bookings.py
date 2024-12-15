@@ -8,15 +8,8 @@ from anvil.tables import app_tables
 
 class Bookings(BookingsTemplate):
     def __init__(self, **properties):
-        self.init_components(**properties)
-        
-        # Populate time dropdown
-        self.time_dropdown.items = [("8:00-9:00", "8:00-9:00"), 
-                                    ("9:00-10:00", "9:00-10:00"), 
-                                    ("10:00-11:00", "10:00-11:00")]
-        
-        # Populate the teacher slots dropdown on form load
-        self.populate_block_dropdown()
+    # Set Form properties and Data Bindings.
+      self.init_components(**properties)
 
     def populate_block_dropdown(self):
         """Populate the slot_for_teachers dropdown with available blocks."""
