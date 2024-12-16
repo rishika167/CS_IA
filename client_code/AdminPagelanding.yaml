@@ -45,6 +45,10 @@ components:
   name: Sign_out
   properties: {text: Sign Out}
   type: Button
+- layout_properties: {slot: title}
+  name: label_2_copy
+  properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: Admin Page, tooltip: '', underline: false, visible: true}
+  type: Label
 container:
   properties: {html: '@theme:standard-page.html'}
   type: HtmlTemplate

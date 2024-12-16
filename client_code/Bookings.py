@@ -5,44 +5,53 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from datetime import date, timedelta
 
 class Bookings(BookingsTemplate):
     def __init__(self, **properties):
-    # Set Form properties and Data Bindings.
-      self.init_components(**properties)
+        # Set Form properties and Data Bindings.
+        self.init_components(**properties)
+
+        # Initialize the DatePicker
+        self.datepicker.max_date = date.today() + timedelta(days=30)
 
     def populate_block_dropdown(self):
         """Populate the slot_for_teachers dropdown with available blocks."""
-        # Get all blocks that are not booked
         available_blocks = app_tables.slots.search(Booked=False)
-
-        # Add them to the dropdown (show Block name)
-        self.slot_for_teachers.items = [
-            (block['Block'], block) for block in available_blocks
-        ]
-
-        # If no blocks are available, set a placeholder
+        self.slot_for_teachers.items = [(block['Block'], block) for block in available_blocks]
         if not available_blocks:
             self.slot_for_teachers.placeholder = "No blocks available"
 
-    def slot_for_teachers_change(self, **event_args):
+    def pick_slot_change(self, **event_args):
         """Handle changes in the slot_for_teachers dropdown."""
-        selected_block = self.slot_for_teachers.selected_value
-        if selected_block:
-            alert(f"You selected block: {selected_block['Block']}")
+        self.confirm_slot_button.enabled = bool(self.start_drop_down.selected_value)
 
     def submit_button_click(self, **event_args):
         """Handle the Submit button click."""
-        date = self.date_picker_1.date
-        time = self.time_dropdown.selected_value
-        teacher_slot = self.slot_for_teachers.selected_value
+        self.item['start'] = self.start_drop_down.selected_value
+        print(self.item['start'])
+        self.content_panel.clear()
 
-        if date and time and teacher_slot:
-            try:
-                # Call the server function to save the booking
-                result = anvil.server.call('save_booking', date, time, teacher_slot)
-                alert(result, title="Success")
-            except Exception as e:
-                alert(f"Error saving booking: {e}", title="Error")
+    def datepicker_change(self, **event_args):
+        """This method is called when the selected date changes"""
+        selected_date = self.datepicker.date  # Ensure this matches the component name
+        if selected_date:
+            day = selected_date.isoformat()
+            start_times = self.item['slots_dict_by_day'].get(day, [])
+            self.start_drop_down.items = start_times
+            self.start_drop_down.enabled = bool(start_times)
+            self.start_drop_down.placeholder = 'Pick a slot' if start_times else 'No slots - choose another day'
+
+            # Save the selected date to the bookings table
+            app_tables.bookings.add_row(
+                date=selected_date,
+                user=anvil.users.get_user(),
+                created_on=date.today()
+            )
         else:
-            alert("Please select a date, time, and teacher slot.", title="Error")
+            self.start_drop_down.enabled = False
+            self.start_drop_down.placeholder = 'Select a valid date'
+
+    def Special_request_pressed_enter(self, **event_args):
+        """Handle the pressed enter event for the Special_request field."""
+        pass
