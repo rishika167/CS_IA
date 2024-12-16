@@ -28,6 +28,11 @@ components:
       include_placeholder: false
       items: [Admin, Teacher]
     type: DropDown
+  - event_bindings: {click: Create_User_click}
+    layout_properties: {grid_position: 'RDGGFQ,JNJCHQ'}
+    name: Create_User
+    properties: {text: Create User}
+    type: Button
   layout_properties: {slot: default}
   name: content_panel
   properties: {}

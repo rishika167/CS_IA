@@ -5,6 +5,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+import custom_signup.login_flow
 
 
 class Add_User(Add_UserTemplate):
@@ -25,3 +26,7 @@ class Add_User(Add_UserTemplate):
   def Sign_out_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('Log_in')
+
+  def Create_User_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    custom_signup.login_flow.signup_with_form()
