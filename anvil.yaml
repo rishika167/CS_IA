@@ -2,7 +2,7 @@ allow_embedding: false
 correct_dependency_ids: {}
 db_schema:
   bookings:
-    client: none
+    client: full
     columns:
     - admin_ui: {width: 200}
       name: name
@@ -22,19 +22,19 @@ db_schema:
     server: search
     title: bookings
   chemicals:
-    client: none
+    client: full
     columns:
-    - admin_ui: {order: 0, width: 200}
+    - admin_ui: {order: -0.5, width: 200}
       name: Chemical Name
       type: string
     - admin_ui: {order: 1, width: 200}
-      name: Critical_Stock_level
+      name: Critical Stock Level
       type: bool
     - admin_ui: {order: 0.5, width: 200}
       name: Quantity
       type: number
     - admin_ui: {order: 0.75, width: 200}
-      name: units
+      name: Units
       type: string
     server: full
     title: chemicals
@@ -89,5 +89,5 @@ services:
 - client_config: {allow_signup: false, confirm_email: true, enable_automatically: true, use_email: false}
   server_config: {user_table: users}
   source: /runtime/services/anvil/users.yml
-startup: {module: Add_apparatus, type: form}
+startup: {module: Add_chemicals, type: form}
 startup_form: null

@@ -13,6 +13,7 @@ class Add_chemicals(Add_chemicalsTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
+    self.data_grid_1.items = app_tables.chemicals.search()
 
   def Back_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -21,3 +22,4 @@ class Add_chemicals(Add_chemicalsTemplate):
   def Sign_out_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('Log_in')
+
