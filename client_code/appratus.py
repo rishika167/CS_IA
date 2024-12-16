@@ -1,4 +1,4 @@
-from ._anvil_designer import Add_apparatusTemplate
+from ._anvil_designer import appratusTemplate
 from anvil import *
 import anvil.users
 import anvil.server
@@ -7,7 +7,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 
-class Add_apparatus(Add_apparatusTemplate):
+class appratus(appratusTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -25,4 +25,8 @@ class Add_apparatus(Add_apparatusTemplate):
 
   def repeating_panel_1_show(self, **event_args):
     """This method is called when the repeating panel is shown on the screen"""
+    pass
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
     pass

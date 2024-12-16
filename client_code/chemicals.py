@@ -1,4 +1,4 @@
-from ._anvil_designer import Add_chemicalsTemplate
+from ._anvil_designer import chemicalsTemplate
 from anvil import *
 import anvil.users
 import anvil.server
@@ -7,7 +7,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 
-class Add_chemicals(Add_chemicalsTemplate):
+class chemicals(chemicalsTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
