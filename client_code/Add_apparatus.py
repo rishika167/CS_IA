@@ -13,6 +13,7 @@ class Add_apparatus(Add_apparatusTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run when the form opens.
+    self.repeating_panel_1.items = app_tables.chemicals.search()
 
   def Back_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -21,3 +22,7 @@ class Add_apparatus(Add_apparatusTemplate):
   def Sign_out_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('Log_in')
+
+  def repeating_panel_1_show(self, **event_args):
+    """This method is called when the repeating panel is shown on the screen"""
+    pass

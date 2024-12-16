@@ -12,10 +12,10 @@ components:
     name: button_4
     properties: {text: Delete}
     type: Button
-  - layout_properties: {grid_position: 'TIEKKI,KGGDTR'}
-    name: card_1
-    properties: {role: card}
-    type: ColumnPanel
+  - layout_properties: {grid_position: 'HBUAGA,VKDYEI'}
+    name: repeating_panel_1
+    properties: {item_template: ItemTemplate3}
+    type: RepeatingPanel
   layout_properties: {slot: default}
   name: content_panel
   properties: {}
