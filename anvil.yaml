@@ -55,27 +55,18 @@ db_schema:
   users:
     client: full
     columns:
-    - admin_ui: {width: 200}
-      name: email
-      type: string
-    - admin_ui: {width: 200}
-      name: enabled
+    - admin_ui: {order: 8, width: 200}
+      name: Check_username
       type: bool
-    - admin_ui: {width: 200}
-      name: last_login
-      type: datetime
-    - admin_ui: {width: 200}
-      name: password_hash
+    - admin_ui: {order: 7, width: 200}
+      name: Username
       type: string
-    - admin_ui: {width: 200}
-      name: n_password_failures
-      type: number
-    - admin_ui: {width: 200}
-      name: confirmed_email
+    - admin_ui: {order: 7.5, width: 200}
+      name: Password
+      type: string
+    - admin_ui: {order: 10, width: 200}
+      name: Check_password
       type: bool
-    - admin_ui: {width: 200}
-      name: signed_up
-      type: datetime
     server: search
     title: users
 dependencies: []
