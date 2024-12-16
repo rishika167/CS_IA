@@ -25,18 +25,18 @@ db_schema:
     client: full
     columns:
     - admin_ui: {order: -0.5, width: 200}
-      name: Chemical Name
+      name: chemical_name
       type: string
     - admin_ui: {order: 1, width: 200}
-      name: Critical Stock Level
+      name: critical_stock_level
       type: bool
     - admin_ui: {order: 0.5, width: 200}
-      name: Quantity
+      name: quantity
       type: number
     - admin_ui: {order: 0.75, width: 200}
-      name: Units
+      name: units
       type: string
-    server: full
+    server: search
     title: chemicals
   slots:
     client: full

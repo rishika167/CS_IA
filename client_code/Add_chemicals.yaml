@@ -25,10 +25,10 @@ components:
       name: data_grid_1
       properties:
         columns:
-        - {data_key: Chemical Name, id: DTONII, title: Chemical Name}
-        - {data_key: Quantity, id: TNJDSM, title: Quantity}
-        - {data_key: units, id: MTDOPS, title: units}
-        - {data_key: Critical_Stock_level, id: CBQOEA, title: Critical_Stock_level}
+        - {data_key: chemical_name, id: XBITXQ, title: Chemical Name}
+        - {data_key: quantity, id: CVHSXL, title: Quantity}
+        - {data_key: units, id: BYYXWS, title: Units}
+        - {data_key: critical_stock_level, id: CUIOSW, title: Critical Stock Level}
       type: DataGrid
     layout_properties: {grid_position: 'SBAJYH,TKARTK'}
     name: card_1
