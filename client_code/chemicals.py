@@ -23,3 +23,7 @@ class chemicals(chemicalsTemplate):
     """This method is called when the button is clicked"""
     open_form('Log_in')
 
+  def add_chemicals_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('chemicals_add')
+

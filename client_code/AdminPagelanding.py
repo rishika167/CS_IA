@@ -20,7 +20,7 @@ class AdminPagelanding(AdminPagelandingTemplate):
 
   def apparatus_page_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('Add_apparatus')
+    open_form('appratus')
 
   def button_7_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -32,7 +32,7 @@ class AdminPagelanding(AdminPagelandingTemplate):
 
   def chemicals_page_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('Add_chemicals')
+    open_form('chemicals')
 
   def Sign_out_click(self, **event_args):
     """This method is called when the button is clicked"""
