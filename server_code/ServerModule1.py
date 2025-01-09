@@ -60,4 +60,33 @@ def send_notification(email, day, block):
 def check_slot_availability(day, block):
     slot = app_tables.slots.get(day=day, block=block)
     return slot['available'] if slot else False
-  
+  import anvil.tables as tables
+from anvil.tables import app_tables
+
+import anvil.tables as tables
+import anvil.tables.query as q
+from anvil.tables import app_tables
+import anvil.server
+
+@anvil.server.callable
+def update_chemical(chemical, chemical_data):
+    """
+    Update an existing chemical record.
+    """
+    if chemical_data['chemical_name'] and chemical_data['quantity'] is not None and chemical_data['units'] and chemical_data['critical_stock_level'] is not None:
+        chemical.update(**chemical_data)
+
+@anvil.server.callable
+def add_chemical(chemical_data):
+    """
+    Add a new chemical to the database.
+    """
+    if chemical_data['chemical_name'] and chemical_data['quantity'] is not None and chemical_data['units'] and chemical_data['critical_stock_level'] is not None:
+        app_tables.chemicals.add_row(**chemical_data)
+
+@anvil.server.callable
+def delete_chemical(chemical):
+    """
+    Delete a chemical from the database.
+    """
+    chemical.delete()

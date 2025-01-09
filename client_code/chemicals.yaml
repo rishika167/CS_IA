@@ -22,6 +22,7 @@ components:
       name: data_grid_1
       properties:
         columns:
+        - {data_key: column_1, id: JKSDUP, title: Column 1}
         - {data_key: chemical_name, id: UWMILQ, title: chemical_name}
         - {data_key: quantity, id: HCEAUM, title: quantity}
         - {data_key: units, id: NJZQWT, title: units}
