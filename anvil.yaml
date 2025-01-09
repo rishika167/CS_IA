@@ -1,6 +1,11 @@
 allow_embedding: false
 correct_dependency_ids: {}
 db_schema:
+  apparatus:
+    client: none
+    columns: []
+    server: full
+    title: apparatus
   bookings:
     client: full
     columns:

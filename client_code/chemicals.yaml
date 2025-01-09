@@ -14,28 +14,26 @@ components:
       name: button_4
       properties: {text: Delete}
       type: Button
+    - components:
+      - name: repeating_panel_2
+        properties: {item_template: RowTemplate2}
+        type: RepeatingPanel
+      layout_properties: {grid_position: 'JIYBLV,LNGYMY'}
+      name: data_grid_1
+      properties:
+        columns:
+        - {data_key: chemical_name, id: UWMILQ, title: chemical_name}
+        - {data_key: quantity, id: HCEAUM, title: quantity}
+        - {data_key: units, id: NJZQWT, title: units}
+        - {data_key: critical_stock_level, id: JSWAEU, title: critical_stock_level}
+      type: DataGrid
+    - layout_properties: {grid_position: 'DVKEKR,YRZAZP'}
+      name: repeating_panel_1
+      properties: {item_template: ItemTemplate4}
+      type: RepeatingPanel
     layout_properties: {grid_position: 'KIZODJ,VEJMPY'}
     name: content_panel_copy
     properties: {}
-    type: ColumnPanel
-  - components:
-    - layout_properties: {slot: footer}
-      name: repeating_panel_1
-      properties: {item_template: ItemTemplate1}
-      type: RepeatingPanel
-    layout_properties: {grid_position: 'KKJLYL,EJMHNL'}
-    name: data_grid_1
-    properties:
-      columns:
-      - {data_key: movie_name, id: JKSDUP, title: Movie Name}
-      - {data_key: director, id: VJQQOR, title: Director}
-      - {data_key: year, id: OJLQEN, title: Year}
-      - {data_key: column_1, id: RQKUQI, title: ''}
-      role: tonal-data-grid
-    type: DataGrid
-  - layout_properties: {grid_position: 'SATXQJ,ZSSUPE'}
-    name: card_1
-    properties: {role: card}
     type: ColumnPanel
   layout_properties: {slot: default}
   name: content_panel

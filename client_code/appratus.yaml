@@ -14,17 +14,22 @@ components:
     properties: {text: Delete}
     type: Button
   - components:
-    - name: card_1
-      properties: {role: card}
-      type: ColumnPanel
-    layout_properties: {grid_position: 'ISNKYA,FNNDEB'}
+    - name: repeating_panel_2
+      properties: {item_template: RowTemplate1}
+      type: RepeatingPanel
+    layout_properties: {grid_position: 'JJJNXR,RJKLFC'}
     name: data_grid_1
     properties:
       columns:
-      - {data_key: column_1, id: JKSDUP, title: Name}
-      - {data_key: column_2, id: VJQQOR, title: Shelf}
-      - {data_key: column_3, id: OJLQEN, title: Room}
+      - {data_key: column_1, id: JKSDUP, title: Column 1}
+      - {data_key: column_2, id: VJQQOR, title: Column 2}
+      - {data_key: column_3, id: OJLQEN, title: Column 3}
+      - {data_key: column_4, id: QSXSJG, title: Column 4}
     type: DataGrid
+  - layout_properties: {grid_position: 'JWOJFX,SEUAEK'}
+    name: repeating_panel_1
+    properties: {item_template: ItemTemplate3}
+    type: RepeatingPanel
   layout_properties: {slot: default}
   name: content_panel
   properties: {}
