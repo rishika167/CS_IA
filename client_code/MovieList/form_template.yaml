@@ -2,6 +2,9 @@ components:
 - components:
   - components:
     - components:
+      - name: flow_panel_1
+        properties: {}
+        type: FlowPanel
       - layout_properties: {}
         name: repeating_panel_1
         properties: {item_template: MovieList.RowTemplate1}
