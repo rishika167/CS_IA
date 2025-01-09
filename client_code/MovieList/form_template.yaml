@@ -1,26 +1,18 @@
 components:
 - components:
   - components:
-    - components:
-      - name: data_row_panel_1
-        properties: {}
-        type: DataRowPanel
-      - layout_properties: {}
-        name: repeating_panel_1
-        properties: {item_template: MovieList.RowTemplate1}
-        type: RepeatingPanel
-      layout_properties: {grid_position: 'THGSIX,QWBOTL'}
-      name: data_grid_1
-      properties:
-        columns:
-        - {data_key: column_1, id: JKSDUP, title: 'Movie Name '}
-        - {data_key: column_2, id: VJQQOR, title: 'Director '}
-        - {data_key: column_3, expand: false, id: OJLQEN, title: Year, width: 320.5}
-      type: DataGrid
-    layout_properties: {grid_position: 'SUIUDX,HFCNIB'}
-    name: column_panel_1
-    properties: {}
-    type: ColumnPanel
+    - name: repeating_panel_1
+      properties: {item_template: MovieList.RowTemplate4}
+      type: RepeatingPanel
+    layout_properties: {grid_position: 'BUGEXA,SETYSC'}
+    name: data_grid_1
+    properties:
+      columns:
+      - {data_key: movie_name, id: UWJAZZ, title: Movie Name}
+      - {data_key: year, id: JCRWEP, title: Year}
+      - {data_key: director, expand: false, id: RHIDTS, title: Director, width: 199.5}
+      - {data_key: summary, id: WNGECZ, title: ''}
+    type: DataGrid
   layout_properties: {slot: default}
   name: content_panel
   properties: {}
