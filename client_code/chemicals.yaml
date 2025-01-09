@@ -19,10 +19,11 @@ components:
     properties: {}
     type: ColumnPanel
   - components:
-    - name: repeating_panel_1
-      properties: {item_template: MovieList.RowTemplate1}
+    - layout_properties: {slot: footer}
+      name: repeating_panel_1
+      properties: {item_template: ItemTemplate1}
       type: RepeatingPanel
-    layout_properties: {grid_position: 'MROXBW,PUEGCQ'}
+    layout_properties: {grid_position: 'KKJLYL,EJMHNL'}
     name: data_grid_1
     properties:
       columns:
