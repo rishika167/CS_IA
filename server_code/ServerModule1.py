@@ -83,3 +83,18 @@ def delete_chemical(chemical):
     Delete a chemical from the database.
     """
     chemical.delete()
+
+
+@anvil.server.callable
+def update_movie(movie, movie_data):
+    if movie_data['director'] and movie_data['movie_name'] and movie_data['summary'] and movie_data['year']:
+        movie.update(**movie_data)
+
+@anvil.server.callable
+def add_movie(movie_data):
+    if movie_data['director'] and movie_data['movie_name'] and movie_data['summary'] and movie_data['year']:
+        app_tables.movies.add_row(**movie_data)
+
+@anvil.server.callable
+def delete_movie(movie):
+    movie.delete()
