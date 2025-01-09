@@ -21,3 +21,8 @@ class chemicals_add(chemicals_addTemplate):
   def Sign_out_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('Log_in')
+
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.clear()
+    pass

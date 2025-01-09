@@ -36,7 +36,12 @@ components:
   name: content_panel
   properties: {col_widths: '{"BWNSHX":30,"ALRLPP":30}'}
   type: ColumnPanel
-- layout_properties: {slot: nav-right}
+- components:
+  - event_bindings: {click: Back_click}
+    name: Back
+    properties: {background: 'theme:White', foreground: 'theme:Primary 500', text: Back}
+    type: Button
+  layout_properties: {slot: nav-right}
   name: navbar_links
   properties: {}
   type: FlowPanel
