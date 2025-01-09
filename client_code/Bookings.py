@@ -79,3 +79,4 @@ class BookingForm(BookingFormTemplate):
         else:
             alert("Please select an available slot.")
           
+          
