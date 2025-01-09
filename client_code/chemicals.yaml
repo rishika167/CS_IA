@@ -18,7 +18,11 @@ components:
     properties: {text: Delete}
     type: Button
   - components:
-    - components: []
+    - components:
+      - layout_properties: {slot: footer}
+        name: data_row_panel_1
+        properties: {}
+        type: DataRowPanel
       layout_properties: {grid_position: 'QCDCAX,ZPGGPH'}
       name: data_grid_1
       properties:
