@@ -29,9 +29,35 @@ def add_feedback(name, email, feedback):
         to="rishika.k1697@gmail.com",  # Change this to your email address
         subject="Request {}".format(name),
         text=f"""
-A new request has been sent!
+    A new request has been sent!
 
-Date: {datetime.now().strftime('%Y-%m-%d')}
-Time: {}
-"""
+    Date: {datetime.now().strftime('%Y-%m-%d')}
+    Time: {{}}
+    """
     )
+
+@anvil.server.callable
+def mark_slot_unavailable(day, block):
+    # Update slot availability in the database
+    app_tables.slots.get(day=day, block=block)['available'] = False
+    
+    # Fetch all users with bookings for this slot
+    affected_bookings = app_tables.bookings.search(day=day, block=block)
+    affected_users = {booking['user'] for booking in affected_bookings}
+    
+    # Notify affected users
+    for user in affected_users:
+        send_notification(user['email'], day, block)
+
+def send_notification(email, day, block):
+    # Email notification example
+    anvil.email.send(
+        to=email,
+        subject="Slot Unavailable Notification",
+        text=f"The slot on {day}, Block {block} is no longer available. Please choose another time."
+    )
+@anvil.server.callable
+def check_slot_availability(day, block):
+    slot = app_tables.slots.get(day=day, block=block)
+    return slot['available'] if slot else False
+  

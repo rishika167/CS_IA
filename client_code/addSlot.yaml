@@ -3,7 +3,7 @@ components:
   - data_bindings: []
     layout_properties: {grid_position: 'ZFUYQD,ZCDHCF'}
     name: label_1
-    properties: {align: center, bold: true, italic: false, text: Create a slot, underline: false}
+    properties: {align: center, bold: true, italic: false, text: Slot Availibilty, underline: false}
     type: Label
   - components:
     - layout_properties: {grid_position: 'SQXPSD,QGGEIY'}
@@ -29,6 +29,11 @@ components:
     name: card_1
     properties: {role: card}
     type: ColumnPanel
+  - event_bindings: {click: not_availible_click}
+    layout_properties: {grid_position: 'KVHDWF,AKHLCY'}
+    name: not_availible
+    properties: {text: Not AVAILABLE}
+    type: Button
   layout_properties: {slot: default}
   name: content_panel
   properties: {}

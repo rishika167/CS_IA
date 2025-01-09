@@ -55,3 +55,27 @@ class Bookings(BookingsTemplate):
     def Special_request_pressed_enter(self, **event_args):
         """Handle the pressed enter event for the Special_request field."""
         pass
+from anvil import *
+import anvil.server
+
+class BookingForm(BookingFormTemplate):
+
+    def check_slot_availability(self, day, block):
+        # Call server function to check availability
+        is_available = anvil.server.call('check_slot_availability', day, block)
+        if not is_available:
+            alert("This slot is unavailable. Please select another slot.")
+        return is_available
+
+    def submit_click(self, **event_args):
+        # Validate before submitting
+        day = self.day_dropdown.selected_value
+        block = self.block_dropdown.selected_value
+        
+        if self.check_slot_availability(day, block):
+            # Proceed with the booking
+            anvil.server.call('book_slot', day, block)
+            alert("Your booking has been confirmed!")
+        else:
+            alert("Please select an available slot.")
+          

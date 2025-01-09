@@ -25,3 +25,14 @@ class addSlot(addSlotTemplate):
   def Sign_out_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('Log_in')
+
+  def not_availible_click(self, **event_args):
+    class AdminPage:
+  
+     def mark_unavailable(self, day, block):
+        # Call a server function to update the database
+        anvil.server.call('mark_slot_unavailable', day, block)
+        alert(f"The slot on {day}, Block {block} has been marked as unavailable.")
+        "This method is called when the button is clicked"
+    
+    pass
