@@ -2,7 +2,12 @@ components:
 - components:
   - components:
     - components:
-      - name: flow_panel_1
+      - components:
+        - layout_properties: {width: 967}
+          name: repeating_panel_2
+          properties: {item_template: MovieList.ItemTemplate5}
+          type: RepeatingPanel
+        name: flow_panel_1
         properties: {}
         type: FlowPanel
       - layout_properties: {}
