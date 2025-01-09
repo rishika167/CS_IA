@@ -27,7 +27,6 @@ class addSlot(addSlotTemplate):
     open_form('Log_in')
 
   def not_availible_click(self, **event_args):
-    class AdminPage:
   
      def mark_unavailable(self, day, block):
         # Call a server function to update the database
