@@ -5,7 +5,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
 from datetime import datetime
-
+  
 @anvil.server.callable
 def save_booking(date, time):
     # Save the booking to the database
@@ -60,13 +60,6 @@ def send_notification(email, day, block):
 def check_slot_availability(day, block):
     slot = app_tables.slots.get(day=day, block=block)
     return slot['available'] if slot else False
-  import anvil.tables as tables
-from anvil.tables import app_tables
-
-import anvil.tables as tables
-import anvil.tables.query as q
-from anvil.tables import app_tables
-import anvil.server
 
 @anvil.server.callable
 def update_chemical(chemical, chemical_data):
