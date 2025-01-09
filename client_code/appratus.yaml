@@ -13,7 +13,10 @@ components:
     name: button_4
     properties: {text: Delete}
     type: Button
-  - components: []
+  - components:
+    - name: card_1
+      properties: {role: card}
+      type: ColumnPanel
     layout_properties: {grid_position: 'ISNKYA,FNNDEB'}
     name: data_grid_1
     properties:
