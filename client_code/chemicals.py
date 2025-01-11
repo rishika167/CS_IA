@@ -1,4 +1,4 @@
-from ._anvil_designer import RowTemplate1Template
+from ._anvil_designer import chemicalsTemplate
 from anvil import *
 import anvil.server
 import anvil.users
@@ -7,9 +7,9 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 
-class RowTemplate1(RowTemplate1Template):
+class chemicals(chemicalsTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-    # Any code you write here will run before the form opens.
+    # Any code you write here will run when the form opens.
