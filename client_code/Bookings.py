@@ -55,8 +55,6 @@ class Bookings(BookingsTemplate):
     def Special_request_pressed_enter(self, **event_args):
         """Handle the pressed enter event for the Special_request field."""
         pass
-from anvil import *
-import anvil.server
 
 class BookingForm(BookingFormTemplate):
 
