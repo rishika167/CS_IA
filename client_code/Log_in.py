@@ -17,3 +17,4 @@ class Log_in(Log_inTemplate):
   def sign_in_button_click(self, **event_args):
     """This method is called when the button is clicked"""
     pass
+anvil.users.login_with_form()

@@ -89,6 +89,30 @@ db_schema:
     - admin_ui: {width: 200}
       name: Check_password
       type: bool
+    - admin_ui: {order: 4, width: 200}
+      name: email
+      type: string
+    - admin_ui: {order: 5, width: 200}
+      name: enabled
+      type: bool
+    - admin_ui: {order: 6, width: 200}
+      name: last_login
+      type: datetime
+    - admin_ui: {order: 7, width: 200}
+      name: password_hash
+      type: string
+    - admin_ui: {order: 8, width: 200}
+      name: n_password_failures
+      type: number
+    - admin_ui: {order: 9, width: 200}
+      name: confirmed_email
+      type: bool
+    - admin_ui: {order: 10, width: 200}
+      name: signed_up
+      type: datetime
+    - admin_ui: {order: 11, width: 200}
+      name: role
+      type: string
     server: search
     title: users
 dependencies: []
@@ -108,7 +132,7 @@ services:
 - client_config: {}
   server_config: {}
   source: /runtime/services/anvil/email.yml
-- client_config: {allow_signup: false, confirm_email: true, enable_automatically: true, use_email: false}
+- client_config: {allow_signup: true, confirm_email: true, enable_automatically: true, require_secure_passwords: false, use_email: true}
   server_config: {user_table: users}
   source: /runtime/services/anvil/users.yml
 startup: {module: chemicals_add, type: form}
